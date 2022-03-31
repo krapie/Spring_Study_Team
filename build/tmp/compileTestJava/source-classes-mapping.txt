@@ -1,0 +1,2 @@
+kom/komputer/springstudy/springboot/HelloControllerTest.java
+ kom.komputer.springstudy.springboot.HelloControllerTest
