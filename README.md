@@ -1,6 +1,5 @@
 # Spring_Study_Team
 2022년 "코테이토" 스프링 스터디 저장소
-브랜치: 지환이의 브랜치
 
 ## 목표
 > [스프링 부트와 AWS로 혼자 구현하는 웹 서비스](http://www.yes24.com/Product/Goods/83849117)
