@@ -1,6 +1,5 @@
 package com.taehyeon.book.springboot.web;
 
-import org.apache.tomcat.util.json.JSONParser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+
 
 @RunWith(SpringRunner.class)    //잘 모르겠음
 @WebMvcTest(controllers = HelloController.class)    //여러스프링 어노테이션중 Web(Spring MVC)에 집중할 수 있게하는 것
@@ -24,7 +23,7 @@ public class HelloControllerTest {
     public void hello가_리턴된다() throws Exception {
         String hello = "hello";
 
-        JSONParser content;
+        //JSONParser content;
         mvc.perform(get("/hello"))  //MockMvc를 통해 /hello 주소로 HTTP GET요청을 합니다
                 .andExpect(status().isOk())     //mve.perform의 결과를 검증, (200, 404, 500등의 상태 검증)
                 .andExpect(content().string(hello));    //mvc.perform의 결과를 검증, Controller에서 "hello"를 리턴하기 때문에 이값이 맞는지 검증

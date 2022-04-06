@@ -11,6 +11,7 @@ public class HelloController {
 
     @GetMapping("/hello")   //HTTP 메소드인 GET의 요청을 받을 수 있는 API를 만들어 준다
     public String hello(){
+
         return "hello";
     }
 
