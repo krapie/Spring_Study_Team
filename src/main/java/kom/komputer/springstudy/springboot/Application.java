@@ -2,7 +2,9 @@ package kom.komputer.springstudy.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing // JPA Auditing 활성화
 @SpringBootApplication // 스프링 부트의 자동 설정 -> classpath 를 참고하여 스프링 Bean 을 생성함 (ex: spring-webmvc 가 classpath 에 있으면 DispatcherServlet + 내장 WAS(Tomcat)을 자동 설정해줌)
 public class Application {
     public static void main(String[] args) {
