@@ -1,13 +1,14 @@
 package com.taehyeon.book.springboot;
 
-import domain.posts.Posts;
-import domain.posts.PostsRepository;
+import com.taehyeon.book.springboot.domain.posts.Posts;
+import com.taehyeon.book.springboot.domain.posts.PostsRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-//@EnableJpaAuditing
+@EnableJpaAuditing
 @SpringBootApplication // 스프링부트의 자동설정, 스프링 bean읽기와 생성을 모두 자동으로 설정, 프로젝트의 최상단에 위치해야함
 @EnableJpaRepositories(basePackageClasses = PostsRepository.class)
 @EntityScan(basePackageClasses = Posts.class)
