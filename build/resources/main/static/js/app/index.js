@@ -6,7 +6,7 @@ var main = {
         });
     },
     save : function() {
-        var = data = {
+        var data = {
             title: $('#title').val(),
             author: $('#author').val(),
             content: $('#content').val()
@@ -21,7 +21,7 @@ var main = {
         }).done(function() {
             alert('글이 등록되었습니다.');
             window.location.href = '/';
-        }).fail(function(error) {
+        }).fail(function (error) {
             alert(JSON.stringify(error));
         });
     }
