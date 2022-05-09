@@ -8,7 +8,6 @@ import lombok.Getter;
 import java.util.Map;
 
 @Getter
-
 public class OAuthAttributes {
     private Map<String, Object> attributes;
     private String nameAttributeKey;
@@ -50,7 +49,7 @@ public class OAuthAttributes {
         return OAuthAttributes.builder()
                 .name((String) response.get("name"))
                 .email((String) response.get("email"))
-                .picture((String) response.get("picture"))
+                .picture((String) response.get("profile-image"))
                 .attributes(response)
                 .nameAttributeKey(userNameAttributeName)
                 .build();
