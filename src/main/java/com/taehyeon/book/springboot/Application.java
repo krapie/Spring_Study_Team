@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication // 스프링부트의 자동설정, 스프링 bean읽기와 생성을 모두 자동으로 설정, 프로젝트의 최상단에 위치해야함
 //@EnableJpaRepositories(basePackageClasses = PostsRepository.class)
 //@EntityScan(basePackageClasses = Posts.class)
+//@ComponentScan(basePackages={"com.taehyeon.book.springboot.domain"})
 public class Application {
     public static void main(String args[]){
         SpringApplication.run(Application.class, args); //내장 was실행

@@ -1,13 +1,17 @@
-package com.taehyeon.book.springboot.service;
+package com.taehyeon.book.springboot.service.posts;
 
 import com.taehyeon.book.springboot.domain.posts.Posts;
 import com.taehyeon.book.springboot.domain.posts.PostsRepository;
+import com.taehyeon.book.springboot.web.dto.PostsListResponseDto;
 import com.taehyeon.book.springboot.web.dto.PostsResponseDto;
 import com.taehyeon.book.springboot.web.dto.PostsSaveRequestDto;
 import com.taehyeon.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @RequiredArgsConstructor    //final이 선언된 모든 필드를 인자값으로 하는 생성자를 생성 (얘가 다 해줌)
@@ -36,5 +40,12 @@ public class PostsService {
         PostsResponseDto responseDto = new PostsResponseDto(posts);
 
         return responseDto;
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc(){
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
     }
 }

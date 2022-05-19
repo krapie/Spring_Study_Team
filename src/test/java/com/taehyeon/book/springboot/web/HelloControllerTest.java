@@ -12,6 +12,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
+
 @RunWith(SpringRunner.class)    //잘 모르겠음
 @WebMvcTest(controllers = HelloController.class)    //여러스프링 어노테이션중 Web(Spring MVC)에 집중할 수 있게하는 것
 public class HelloControllerTest {

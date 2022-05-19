@@ -1,6 +1,6 @@
 package com.taehyeon.book.springboot.web;
 
-import com.taehyeon.book.springboot.service.PostsService;
+import com.taehyeon.book.springboot.service.posts.PostsService;
 import com.taehyeon.book.springboot.web.dto.PostsResponseDto;
 import com.taehyeon.book.springboot.web.dto.PostsSaveRequestDto;
 import com.taehyeon.book.springboot.web.dto.PostsUpdateRequestDto;
